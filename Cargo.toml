@@ -1,0 +1,11 @@
+[workspace]
+resolver= "3"
+members = ["location-service"]
+
+[workspace.dependencies]
+tokio = "1.53.1"
+axum = "0.8.9"
+thiserror = "2.0.20"
+uuid = "1.26.0"
+serde = "1.0.229"
+sqlx = "0.9.0"

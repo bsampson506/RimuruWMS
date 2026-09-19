@@ -1,0 +1,20 @@
+[package]
+name = "location-service"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+sqlx = { workspace = true, features = ["postgres", "runtime-tokio"] }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+uuid = { workspace = true, features = ["serde"] }
+
+[[bin]]
+name = "location-api"
+path = "src/bin/location-api.rs"
+
+[[bin]]
+name = "location-worker"
+path = "src/bin/location-worker.rs"
